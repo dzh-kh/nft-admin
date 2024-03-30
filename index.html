@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./styles/index.css" rel="stylesheet" />
+    <title>Nft Admin Panel</title>
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="sidebar__top">
+          <button class="mobile-sidebar__close-btn icon-btn">
+            <img src="./assets/images/cross.svg" alt="cross" />
+          </button>
+          <div class="sidebar__user user-sidebar">
+            <div class="user-sidebar__avatar">
+              <img src="./assets/images/avatar4.png" alt="avatar" />
+            </div>
+            <p class="user-sidebar__name">Leonard</p>
+          </div>
+        </div>
+        <div class="sidebar__menu menu-sidebar">
+          <section class="menu-sidebar__sub">
+            <nav class="menu-sidebar__nav nav-menu">
+              <ul class="nav-menu__list">
+                <li class="nav-menu__item">
+                  <a class="nav-menu__link nav-menu__link--selected" href="#">
+                    <img
+                      src="./assets/images/nav1.svg"
+                      alt="Dashboard"
+                      class="nav-menu__icon"
+                    />
+                    <p class="nav-menu__text">Dashboard</p>
+                  </a>
+                </li>
+                <li class="nav-menu__item">
+                  <a class="nav-menu__link" href="#">
+                    <img
+                      src="./assets/images/nav2.svg"
+                      alt="Market"
+                      class="nav-menu__icon"
+                    />
+                    <p class="nav-menu__text">Market</p>
+                    <span class="nav-menu__pro-sub">PRO</span>
+                  </a>
+                </li>
+                <li class="nav-menu__item">
+                  <a class="nav-menu__link" href="#">
+                    <img
+                      src="./assets/images/nav3.svg"
+                      alt="Active Bids"
+                      class="nav-menu__icon"
+                    />
+                    <p class="nav-menu__text">Active Bids</p>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </section>
+          <section class="menu-sidebar__sub">
+            <h1 class="menu-sidebar__title">PROFILE</h1>
+            <nav class="menu-sidebar__nav nav-menu">
+              <ul class="nav-menu__list">
+                <li class="nav-menu__item">
+                  <a class="nav-menu__link" href="#">
+                    <img
+                      src="./assets/images/nav4.svg"
+                      alt="My Portfolio"
+                      class="nav-menu__icon"
+                    />
+                    <p class="nav-menu__text">My Portfolio</p>
+                  </a>
+                </li>
+                <li class="nav-menu__item">
+                  <a class="nav-menu__link" href="#">
+                    <img
+                      src="./assets/images/nav5.svg"
+                      alt="History"
+                      class="nav-menu__icon"
+                    />
+                    <p class="nav-menu__text">History</p>
+                  </a>
+                </li>
+                <li class="nav-menu__item">
+                  <a class="nav-menu__link" href="#">
+                    <img
+                      src="./assets/images/nav6.svg"
+                      alt="My Wallet"
+                      class="nav-menu__icon"
+                    />
+                    <p class="nav-menu__text">My Wallet</p>
+                  </a>
+                </li>
+                <li class="nav-menu__item">
+                  <a class="nav-menu__link" href="#">
+                    <img
+                      src="./assets/images/nav7.svg"
+                      alt="Setting"
+                      class="nav-menu__icon"
+                    />
+                    <p class="nav-menu__text">Setting</p>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </section>
+        </div>
+        <article class="sidebar__widget balance-widget">
+          <h1 class="balance-widget__title">Your Balance</h1>
+          <p class="balance-widget__value">9.04 ETH</p>
+          <button class="balance-widget__btn btn btn--secondary">
+            Top up Balance
+          </button>
+        </article>
+      </aside>
+
+      <div class="container">
+        <header class="header">
+          <button class="mobile-sidebar__open-btn icon-btn">
+            <img src="./assets/images/burger-menu.svg" alt="burger menu" />
+          </button>
+          <div class="header__searchbar searchbar">
+            <img src="./assets/images/search.svg" class="searchbar__icon" />
+            <input
+              type="text"
+              class="searchbar__field"
+              placeholder="Search Nfts..."
+            />
+            <button class="icon-btn">
+              <img src="./assets/images/setting.svg" class="searchbar__icon" />
+            </button>
+          </div>
+          <div class="header__personal">
+            <div class="header__user user-info">
+              <div class="user-info__avatar">
+                <img src="./assets/images/avatar4.png" alt="avatar" />
+              </div>
+              <div class="user-info__content">
+                <p class="user-info__name">Leonard Perry</p>
+                <p class="user-info__role">Creator</p>
+              </div>
+              <button class="user-info__btn icon-btn">
+                <img class="icon-btn__icon" src="./assets/images/arrow.svg" />
+              </button>
+            </div>
+            <button class="notification-btn icon-btn">
+              <img
+                src="./assets/images/notification.svg"
+                alt="notifcation"
+                class="icon-btn__icon"
+              />
+            </button>
+          </div>
+        </header>
+        <main class="dashboard__main main">
+          <section class="dashboard__section section-dashboard">
+            <div class="section-dashboard__top">
+              <h1 class="section-dashboard__title">Trending NFT's</h1>
+              <div class="section-dashboard__filter card-filter">
+                <ul class="card-filter__list">
+                  <li class="card-filter__item">
+                    <input
+                      checked
+                      type="radio"
+                      name="nft-category"
+                      id="art"
+                      value="art"
+                      class="card-filter__input"
+                    />
+                    <label for="art"> Art </label>
+                  </li>
+                  <li class="card-filter__item">
+                    <input
+                      type="radio"
+                      name="nft-category"
+                      id="music"
+                      value="music"
+                      class="card-filter__input"
+                    />
+                    <label for="music"> Music </label>
+                  </li>
+                  <li class="card-filter__item">
+                    <input
+                      type="radio"
+                      name="nft-category"
+                      id="collectibles"
+                      value="collectibles"
+                      class="card-filter__input"
+                    />
+                    <label for="collectibles"> Collectibles </label>
+                  </li>
+                </ul>
+                <a href="#" class="card-filter__link">See more</a>
+              </div>
+            </div>
+            <div class="section-dashboard__content">
+              <ul class="section-dashboard__list">
+                <li class="section-dashboard__item">
+                  <article class="card-nft">
+                    <div class="card-nft__content">
+                      <div class="card-nft__top">
+                        <img
+                          src="./assets/images/art1.png"
+                          alt="nft image"
+                          class="card-nft__image"
+                        />
+                        <div class="card-nft__details">
+                          <div class="card-nft_bookmark">
+                            <img
+                              src="./assets/images/bookmark.svg"
+                              alt="bookmark"
+                            />
+                          </div>
+                          <time class="card-nft__expire-countdown"
+                            >3 day left</time
+                          >
+                          <div class="card-nft__creators">
+                            <a href="#" class="card-nft__creator">
+                              <img
+                                src="./assets/images/avatar1.png"
+                                alt="creator"
+                              />
+                            </a>
+                            <a href="#" class="card-nft__creator">
+                              <img
+                                src="./assets/images/avatar2.png"
+                                alt="creator"
+                              />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-nft__description">
+                        <h3 class="card-nft__title">Abstrac Girl</h3>
+                        <div class="card-nft__bid bid">
+                          <p class="bid__text">Current Bid</p>
+                          <div class="bid__eth">
+                            <img
+                              src="./assets/images/bid.svg"
+                              alt="bid icon"
+                              class="bid__icon"
+                            />
+                            <p class="bid__value">0.99 ETH</p>
+                          </div>
+                        </div>
+                        <span class="card-nft__price">$2,829</span>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+                <li class="section-dashboard__item">
+                  <article class="card-nft">
+                    <div class="card-nft__content">
+                      <div class="card-nft__top">
+                        <img
+                          src="./assets/images/art2.png"
+                          alt="nft image"
+                          class="card-nft__image"
+                        />
+                        <div class="card-nft__details">
+                          <div class="card-nft_bookmark">
+                            <img
+                              src="./assets/images/bookmark.svg"
+                              alt="bookmark"
+                            />
+                          </div>
+                          <time class="card-nft__expire-countdown"
+                            >5 day left</time
+                          >
+                          <div class="card-nft__creators">
+                            <a href="#" class="card-nft__creator">
+                              <img
+                                src="./assets/images/avatar3.png"
+                                alt="creator"
+                              />
+                            </a>
+                            <a href="#" class="card-nft__creator">
+                              <img
+                                src="./assets/images/avatar1.png"
+                                alt="creator"
+                              />
+                            </a>
+                            <a href="#" class="card-nft__creator">
+                              <img
+                                src="./assets/images/avatar2.png"
+                                alt="creator"
+                              />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-nft__description">
+                        <h3 class="card-nft__title">Beautiful flower</h3>
+                        <div class="card-nft__bid bid">
+                          <p class="bid__text">Current Bid</p>
+                          <div class="bid__eth">
+                            <img
+                              src="./assets/images/bid.svg"
+                              alt="bid icon"
+                              class="bid__icon"
+                            />
+                            <p class="bid__value">0.59 ETH</p>
+                          </div>
+                        </div>
+                        <span class="card-nft__price">$2,829</span>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+                <li class="section-dashboard__item">
+                  <article class="card-nft">
+                    <div class="card-nft__content">
+                      <div class="card-nft__top">
+                        <img
+                          src="./assets/images/art3.png"
+                          alt="nft image"
+                          class="card-nft__image"
+                        />
+                        <div class="card-nft__details">
+                          <div class="card-nft_bookmark">
+                            <img
+                              src="./assets/images/bookmark.svg"
+                              alt="bookmark"
+                            />
+                          </div>
+                          <time class="card-nft__expire-countdown"
+                            >3 day left</time
+                          >
+                          <div class="card-nft__creators">
+                            <a href="#" class="card-nft__creator">
+                              <img
+                                src="./assets/images/avatar1.png"
+                                alt="creator"
+                              />
+                            </a>
+                            <a href="#" class="card-nft__creator">
+                              <img
+                                src="./assets/images/avatar2.png"
+                                alt="creator"
+                              />
+                            </a>
+                            <a href="#" class="card-nft__creator">
+                              <img
+                                src="./assets/images/avatar5.png"
+                                alt="creator"
+                              />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-nft__description">
+                        <h3 class="card-nft__title">Abstrac Color</h3>
+                        <div class="card-nft__bid bid">
+                          <p class="bid__text">Current Bid</p>
+                          <div class="bid__eth">
+                            <img
+                              src="./assets/images/bid.svg"
+                              alt="bid icon"
+                              class="bid__icon"
+                            />
+                            <p class="bid__value">0.05 ETH</p>
+                          </div>
+                        </div>
+                        <span class="card-nft__price">$2,829</span>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="dashboard__section section-dashboard">
+            <div class="section-dashboard__top">
+              <h1 class="section-dashboard__title">Top NFT’s</h1>
+              <div class="section-dashboard__filter table-filter">
+                <div class="select select--primary">
+                  <select>
+                    <option selected value="last 7 days">Last 7 days</option>
+                  </select>
+                </div>
+                <div class="select select--primary">
+                  <select>
+                    <option selected value="all times">All times</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="section-dashboard__content card-wrapper">
+              <table class="section-dashboard__table table-nft">
+                <thead class="table-nft__head">
+                  <tr class="table-nft__row">
+                    <th class="table-nft__hcell"></th>
+                    <th class="table-nft__hcell">Collection</th>
+                    <th class="table-nft__hcell">Volume</th>
+                    <th class="table-nft__hcell">24h%</th>
+                    <th class="table-nft__hcell">Owners</th>
+                    <th class="table-nft__hcell">Items</th>
+                  </tr>
+                </thead>
+                <tbody class="table-nft__body">
+                  <tr class="table-nft__row">
+                    <td class="table-nft__cell">1</td>
+                    <td class="table-nft__cell">
+                      <div class="table-nft__content">
+                        <div class="table-nft__image">
+                          <img
+                            src="./assets/images/table1.png"
+                            alt="art"
+                            class=""
+                          />
+                        </div>
+                        Abstrac paint
+                      </div>
+                    </td>
+
+                    <td class="table-nft__cell">$8,021.99</td>
+                    <td class="table-nft__cell table-nft__cell--fail">
+                      -28.28%
+                    </td>
+                    <td class="table-nft__cell">10.5K</td>
+                    <td class="table-nft__cell">121</td>
+                  </tr>
+                  <tr class="table-nft__row">
+                    <td class="table-nft__cell">2</td>
+                    <td class="table-nft__cell">
+                      <div class="table-nft__content">
+                        <div class="table-nft__image">
+                          <img
+                            src="./assets/images/table2.png"
+                            alt="art"
+                            class=""
+                          />
+                        </div>
+                        3D Circle Art
+                      </div>
+                    </td>
+                    <td class="table-nft__cell">$5,210.02</td>
+                    <td class="table-nft__cell table-nft__cell--success">
+                      +11.18%
+                    </td>
+                    <td class="table-nft__cell">12.3K</td>
+                    <td class="table-nft__cell">210</td>
+                  </tr>
+
+                  <tr class="table-nft__row">
+                    <td class="table-nft__cell">3</td>
+                    <td class="table-nft__cell">
+                      <div class="table-nft__content">
+                        <div class="table-nft__image">
+                          <img
+                            src="./assets/images/table3.png"
+                            alt="art"
+                            class=""
+                          />
+                        </div>
+                        3D Digital Art
+                      </div>
+                    </td>
+                    <td class="table-nft__cell">$4,240.10</td>
+                    <td class="table-nft__cell table-nft__cell--fail">
+                      -17.12%
+                    </td>
+                    <td class="table-nft__cell">14.5K</td>
+                    <td class="table-nft__cell">450</td>
+                  </tr>
+                  <tr class="table-nft__row">
+                    <td class="table-nft__cell">4</td>
+                    <td class="table-nft__cell">
+                      <div class="table-nft__content">
+                        <div class="table-nft__image">
+                          <img
+                            src="./assets/images/table4.png"
+                            alt="art"
+                            class=""
+                          />
+                        </div>
+                        3D Cubo Art
+                      </div>
+                    </td>
+                    <td class="table-nft__cell">$7,058.02</td>
+                    <td class="table-nft__cell table-nft__cell--success">
+                      +10.23
+                    </td>
+                    <td class="table-nft__cell">20.3K</td>
+                    <td class="table-nft__cell">132</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </main>
+        <aside class="dashboard__aside">
+          <article class="article-card card-wrapper">
+            <div class="article-card__top">
+              <h2 class="article-card__title">Recently add</h2>
+              <a href="#" class="article-card__link">See all</a>
+            </div>
+            <div class="article-card__content">
+              <article class="card-nft">
+                <div class="card-nft__content">
+                  <div class="card-nft__top">
+                    <img
+                      src="./assets/images/art4.png"
+                      alt="nft image"
+                      class="card-nft__image"
+                    />
+                    <div class="card-nft__details">
+                      <time class="card-nft__expire-countdown">03:25:14</time>
+                    </div>
+                  </div>
+                  <div class="card-nft__description">
+                    <h3 class="card-nft__title">3D Circle Art</h3>
+                    <div class="card-nft__bid bid">
+                      <p class="bid__text">Current Bid</p>
+                      <div class="bid__eth">
+                        <img
+                          src="./assets/images/bid.svg"
+                          alt="bid icon"
+                          class="bid__icon"
+                        />
+                        <p class="bid__value">0.05 ETH</p>
+                      </div>
+                      <button class="bid__btn btn btn--primary">
+                        Place Bid
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </article>
+          <article class="article-card card-wrapper">
+            <div class="article-card__top">
+              <h2 class="article-card__title">Top Creators</h2>
+              <a href="#" class="article-card__link">See all</a>
+            </div>
+            <div class="article-card__content">
+              <ul class="article-card__list">
+                <li class="article-card__item">
+                  <div class="user-info">
+                    <div class="user-info__avatar">
+                      <img src="./assets/images/avatar6.png" alt="avatar" />
+                    </div>
+                    <div class="user-info__content">
+                      <p class="user-info__name">Joe Yates</p>
+                      <p class="user-info__mail">@joe-y25</p>
+                    </div>
+                  </div>
+                  <button class="article-card__btn btn btn--tertiary">
+                    Follow
+                  </button>
+                </li>
+                <li class="article-card__item">
+                  <div class="user-info">
+                    <div class="user-info__avatar">
+                      <img src="./assets/images/avatar7.png" alt="avatar" />
+                    </div>
+                    <div class="user-info__content">
+                      <p class="user-info__name">Adelaide Perry</p>
+                      <p class="user-info__mail">@adelaide120</p>
+                    </div>
+                  </div>
+                  <button class="article-card__btn btn btn--tertiary">
+                    Follow
+                  </button>
+                </li>
+                <li class="article-card__item">
+                  <div class="user-info">
+                    <div class="user-info__avatar">
+                      <img src="./assets/images/avatar2.png" alt="avatar" />
+                    </div>
+                    <div class="user-info__content">
+                      <p class="user-info__name">Emilie Butler</p>
+                      <p class="user-info__mail">@b_emilie</p>
+                    </div>
+                  </div>
+                  <button class="article-card__btn btn btn--tertiary">
+                    Follow
+                  </button>
+                </li>
+                <li class="article-card__item">
+                  <div class="user-info">
+                    <div class="user-info__avatar">
+                      <img src="./assets/images/avatar8.png" alt="avatar" />
+                    </div>
+                    <div class="user-info__content">
+                      <p class="user-info__name">David Smit</p>
+                      <p class="user-info__mail">@davidsmit</p>
+                    </div>
+                  </div>
+                  <button class="article-card__btn btn btn--tertiary">
+                    Follow
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </aside>
+      </div>
+    </div>
+  </body>
+</html>

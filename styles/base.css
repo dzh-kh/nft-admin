@@ -1,0 +1,35 @@
+:root {
+  --black1: #0a0a24;
+  --white1: 236, 235, 246;
+  --white2: #ffffff;
+  --violet1: #5639ff;
+  --violet2: #8270eb;
+  --violet3: #201e43;
+  --violet4: #b7abff;
+  --violet5: #868cff;
+  --violet6: #4318ff;
+  --violet7: #727190;
+  --violet8: 130, 112, 235;
+  --violet9: #444bf8;
+  --violet10: #cdc6f9;
+  --violet11: 126, 107, 239;
+  --red1: #f35077;
+  --green1: #05cd99;
+  --green2: rgba(5, 205, 153, 0.11);
+}
+
+* {
+  box-sizing: border-box;
+  transition: all 0.3s linear;
+}
+
+button,
+input,
+select,
+label {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
