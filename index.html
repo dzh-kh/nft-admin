@@ -129,8 +129,8 @@
               class="searchbar__field"
               placeholder="Search Nfts..."
             />
-            <button class="icon-btn">
-              <img src="./assets/images/setting.svg" class="searchbar__icon" />
+            <button class="searchbar__settings icon-btn">
+              <img src="./assets/images/setting.svg" />
             </button>
           </div>
           <div class="header__personal">
@@ -143,15 +143,11 @@
                 <p class="user-info__role">Creator</p>
               </div>
               <button class="user-info__btn icon-btn">
-                <img class="icon-btn__icon" src="./assets/images/arrow.svg" />
+                <img src="./assets/images/arrow.svg" />
               </button>
             </div>
             <button class="notification-btn icon-btn">
-              <img
-                src="./assets/images/notification.svg"
-                alt="notifcation"
-                class="icon-btn__icon"
-              />
+              <img src="./assets/images/notification.svg" alt="notifcation" />
             </button>
           </div>
         </header>
@@ -208,12 +204,12 @@
                           class="card-nft__image"
                         />
                         <div class="card-nft__details">
-                          <div class="card-nft_bookmark">
+                          <button class="card-nft_bookmark icon-btn">
                             <img
                               src="./assets/images/bookmark.svg"
                               alt="bookmark"
                             />
-                          </div>
+                          </button>
                           <time class="card-nft__expire-countdown"
                             >3 day left</time
                           >
@@ -261,12 +257,12 @@
                           class="card-nft__image"
                         />
                         <div class="card-nft__details">
-                          <div class="card-nft_bookmark">
+                          <button class="card-nft_bookmark">
                             <img
                               src="./assets/images/bookmark.svg"
                               alt="bookmark"
                             />
-                          </div>
+                          </button>
                           <time class="card-nft__expire-countdown"
                             >5 day left</time
                           >
@@ -320,12 +316,12 @@
                           class="card-nft__image"
                         />
                         <div class="card-nft__details">
-                          <div class="card-nft_bookmark">
+                          <button class="card-nft_bookmark">
                             <img
                               src="./assets/images/bookmark.svg"
                               alt="bookmark"
                             />
-                          </div>
+                          </button>
                           <time class="card-nft__expire-countdown"
                             >3 day left</time
                           >
@@ -389,15 +385,18 @@
               </div>
             </div>
             <div class="section-dashboard__content card-wrapper">
-              <table class="section-dashboard__table table-nft">
+              <table
+                class="section-dashboard__table table-nft"
+                aria-label="NFT arts"
+              >
                 <thead class="table-nft__head">
                   <tr class="table-nft__row">
-                    <th class="table-nft__hcell"></th>
-                    <th class="table-nft__hcell">Collection</th>
-                    <th class="table-nft__hcell">Volume</th>
-                    <th class="table-nft__hcell">24h%</th>
-                    <th class="table-nft__hcell">Owners</th>
-                    <th class="table-nft__hcell">Items</th>
+                    <th class="table-nft__hcell" scope="col"></th>
+                    <th class="table-nft__hcell" scope="col">Collection</th>
+                    <th class="table-nft__hcell" scope="col">Volume</th>
+                    <th class="table-nft__hcell" scope="col">24h%</th>
+                    <th class="table-nft__hcell" scope="col">Owners</th>
+                    <th class="table-nft__hcell" scope="col">Items</th>
                   </tr>
                 </thead>
                 <tbody class="table-nft__body">
@@ -499,7 +498,7 @@
               <a href="#" class="article-card__link">See all</a>
             </div>
             <div class="article-card__content">
-              <article class="card-nft">
+              <div class="card-nft">
                 <div class="card-nft__content">
                   <div class="card-nft__top">
                     <img
@@ -529,7 +528,7 @@
                     </div>
                   </div>
                 </div>
-              </article>
+              </div>
             </div>
           </article>
           <article class="article-card card-wrapper">
