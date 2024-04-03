@@ -1,9 +1,9 @@
 :root {
-  --black1: #0a0a24;
-  --white1: 236, 235, 246;
-  --white2: #ffffff;
-  --card-background: #201e43;
+  --layout-bg: #0a0a24;
+  --text: 236, 235, 246;
+  --white1: #ffffff;
   --violet1: #b7abff;
+  --card-background: #201e43;
   --widget-gradient-start: #868cff;
   --widget-gradient-end: #4318ff;
   --nav-text-color: #727190;
