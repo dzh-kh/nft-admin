@@ -89,7 +89,7 @@
 .nav-menu__link--selected {
   display: flex;
   color: var(--violet1);
-  background: rgba(var(--nav-selected-bg), 0.04);
+  background: rgba(var(--nav-selected-bg-rgb), 0.04);
 }
 .nav-menu__link--selected:after {
   content: "";
@@ -158,7 +158,7 @@
 
 .searchbar {
   background: var(--card-bg);
-  color: rgba(var(--text), 1);
+  color: rgba(var(--text-rgb), 1);
   border-radius: 12px;
   padding: 13px 30px;
   display: flex;
@@ -172,7 +172,7 @@
   width: 100%;
 }
 .searchbar__field::placeholder {
-  color: rgba(var(--text), 0.62);
+  color: rgba(var(--text-rgb), 0.62);
 }
 
 .notification-btn {
@@ -203,7 +203,7 @@
 .user-info {
   display: flex;
   align-items: center;
-  color: rgba(var(--text), 1);
+  color: rgba(var(--text-rgb), 1);
 }
 
 .user-info__content {
@@ -217,7 +217,7 @@
   font-size: 0.714rem;
 }
 .user-info__mail {
-  color: rgba(var(--text), 0.62);
+  color: rgba(var(--text-rgb), 0.62);
   margin-top: 8px;
 }
 .user-info__btn {
@@ -271,7 +271,7 @@
 
 .section-dashboard__filter.card-filter {
   gap: 45px;
-  color: rgba(var(--text), 0.62);
+  color: rgba(var(--text-rgb), 0.62);
   font-size: 1.286rem;
 }
 .card-filter__list {
@@ -403,7 +403,7 @@
 
 .card-nft__price {
   font-size: 0.857rem;
-  color: rgba(var(--text), 0.5);
+  color: rgba(var(--text-rgb), 0.5);
   align-self: end;
 }
 
@@ -419,7 +419,7 @@
   width: 100%;
 }
 .table-nft__head {
-  color: rgba(var(--text), 0.62);
+  color: rgba(var(--text-rgb), 0.62);
   margin-bottom: 26px;
 }
 
@@ -438,7 +438,7 @@
 }
 
 .table-nft__row {
-  color: rgba(var(---text), 1);
+  color: rgba(var(---text-rgb), 1);
 }
 
 .table-nft__cell:nth-of-type(2) {
@@ -499,10 +499,10 @@
 }
 .article-card__title {
   font-size: 1.286rem;
-  color: rgba(var(---text), 1);
+  color: rgba(var(---text-rgb), 1);
 }
 .article-card__link {
-  color: rgba(var(--text), 0.62);
+  color: rgba(var(--text-rgb), 0.62);
 }
 .article-card__content {
   padding: 0 8px;
@@ -563,7 +563,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 29px 16px 20px 16px;
-  color: rgba(var(--text), 1);
+  color: rgba(var(--text-rgb), 1);
 }
 
 .balance-widget__btn {
@@ -585,19 +585,19 @@
 
 .btn--primary {
   background: var(--primary-btn-bg);
-  color: rgba(var(--text), 1);
+  color: rgba(var(--text-rgb), 1);
   font-weight: 600;
 }
 
 .btn--secondary {
-  color: rgba(var(--text), 1);
+  color: rgba(var(--text-rgb), 1);
   color: var(--secondary-btn-text);
   font-weight: 700;
   background: var(--white2);
 }
 
 .btn--tertiary {
-  background: rgba(var(--tertiary-btn-bg), 0.2);
+  background: rgba(var(--tertiary-btn-bg-rgb), 0.2);
   color: var(--tertiary-btn-text);
 }
 
@@ -630,5 +630,5 @@
 
 .select--primary {
   background: var(--card-bg);
-  color: rgba(var(--text), 1);
+  color: rgba(var(--text-rgb), 1);
 }

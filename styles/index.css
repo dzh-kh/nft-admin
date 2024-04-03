@@ -9,7 +9,7 @@ html {
 
 body {
   display: flex;
-  color: rgba(var(--text), 1);
+  color: rgba(var(--text-rgb), 1);
   background: var(--layout-bg);
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
