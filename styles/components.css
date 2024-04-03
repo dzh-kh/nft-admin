@@ -89,7 +89,7 @@
 .nav-menu__link--selected {
   display: flex;
   color: var(--violet1);
-  background: rgba(var(--nav-selected-bg-rgb), 0.04);
+  background: var(--nav-selected-bg);
 }
 .nav-menu__link--selected:after {
   content: "";
@@ -557,7 +557,7 @@
   background: linear-gradient(
     to bottom right,
     var(--widget-gradient-start),
-    var(--widget-gradient-start)
+    var(--widget-gradient-end)
   );
   display: flex;
   flex-direction: column;
@@ -590,14 +590,13 @@
 }
 
 .btn--secondary {
-  color: rgba(var(--text-rgb), 1);
   color: var(--secondary-btn-text);
   font-weight: 700;
-  background: var(--white2);
+  background: var(--white1);
 }
 
 .btn--tertiary {
-  background: rgba(var(--tertiary-btn-bg-rgb), 0.2);
+  background: var(--tertiary-btn-bg);
   color: var(--tertiary-btn-text);
 }
 

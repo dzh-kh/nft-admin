@@ -7,14 +7,14 @@
   --widget-gradient-start: #868cff;
   --widget-gradient-end: #4318ff;
   --nav-text: #727190;
-  --nav-selected-bg-rgb: 126, 107, 239;
-  --tertiary-btn-bg-rgb: 130, 112, 235;
+  --nav-selected-bg: #7e6bef0a;
+  --tertiary-btn-bg: #8270eb33;
   --tertiary-btn-text: #cdc6f9;
   --secondary-btn-text: #444bf8;
   --primary-btn-bg: #5639ff;
   --fail: #f35077;
   --success: #05cd99;
-  --pro-sub-bg: rgba(5, 205, 153, 0.11);
+  --pro-sub-bg: #05cd991c;
 }
 
 * {
