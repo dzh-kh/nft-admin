@@ -3,7 +3,7 @@
 .sidebar {
   width: 247px;
   padding: 0 0px 50px 28px;
-  background: var(--card-background);
+  background: var(--card-bg);
   position: fixed;
   max-height: 100vh;
   height: 100%;
@@ -80,7 +80,7 @@
   align-items: center;
   gap: 14px;
   height: 50px;
-  color: var(--nav-text-color);
+  color: var(--nav-text);
   position: relative;
   padding: 0 25px 0 12px;
   border-radius: 5px 0px 0px 5px;
@@ -89,7 +89,7 @@
 .nav-menu__link--selected {
   display: flex;
   color: var(--violet1);
-  background: rgba(var(--nav-selected-color), 0.04);
+  background: rgba(var(--nav-selected-bg), 0.04);
 }
 .nav-menu__link--selected:after {
   content: "";
@@ -157,7 +157,7 @@
 }
 
 .searchbar {
-  background: var(--card-background);
+  background: var(--card-bg);
   color: rgba(var(--text), 1);
   border-radius: 12px;
   padding: 13px 30px;
@@ -177,7 +177,7 @@
 
 .notification-btn {
   padding: 12px 15px;
-  background: var(--card-background);
+  background: var(--card-bg);
   border-radius: 50%;
   width: 46px;
   height: 46px;
@@ -314,7 +314,7 @@
 
 /* nft card */
 .card-nft {
-  background-color: var(--card-background);
+  background-color: var(--card-bg);
   border-radius: 15px;
   padding: 9px 8px 27px 8px;
 }
@@ -344,7 +344,7 @@
   position: absolute;
   left: 11px;
   bottom: 17px;
-  background-color: var(--card-background);
+  background-color: var(--card-bg);
   border-radius: 13px;
   padding: 4px 9px;
   font-size: 0.786rem;
@@ -367,7 +367,7 @@
 }
 
 .card-nft__creator img {
-  border: 3px solid var(--card-background);
+  border: 3px solid var(--card-bg);
   border-radius: 50%;
   width: 100%;
 }
@@ -546,7 +546,7 @@
 }
 
 .card-wrapper {
-  background-color: var(--card-background);
+  background-color: var(--card-bg);
   border-radius: 15px;
 }
 
@@ -629,6 +629,6 @@
 }
 
 .select--primary {
-  background: var(--card-background);
+  background: var(--card-bg);
   color: rgba(var(--text), 1);
 }

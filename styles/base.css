@@ -3,11 +3,11 @@
   --text: 236, 235, 246;
   --white1: #ffffff;
   --violet1: #b7abff;
-  --card-background: #201e43;
+  --card-bg: #201e43;
   --widget-gradient-start: #868cff;
   --widget-gradient-end: #4318ff;
-  --nav-text-color: #727190;
-  --nav-selected-color: 126, 107, 239;
+  --nav-text: #727190;
+  --nav-selected-bg: 126, 107, 239;
   --tertiary-btn-bg: 130, 112, 235;
   --tertiary-btn-text: #cdc6f9;
   --secondary-btn-text: #444bf8;
