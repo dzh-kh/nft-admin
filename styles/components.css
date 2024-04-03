@@ -211,7 +211,6 @@
 }
 .user-info__name {
   margin-bottom: 5px;
-  /*    !убрать?*/
 }
 .user-info__role,
 .user-info__mail {
@@ -241,19 +240,25 @@
 .dashboard__main {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 13px;
 }
 
-.section-dashboard__top {
-  display: flex;
+.section-dashboard {
+  display: grid;
+  grid-template-rows: 92px 1fr;
+  grid-template-columns: repeat(2, auto);
   align-items: center;
-  height: 92px;
-  justify-content: space-between;
-  gap: 10px;
+  grid-template-columns: 1fr auto;
 }
+
 .section-dashboard__title {
   font-size: 1.714rem;
   font-weight: 600;
+}
+
+.section-dashboard__content {
+  grid-area: 2 / 1 / 3 / 3;
+  overflow: auto;
 }
 
 .section-dashboard__filter {
@@ -287,10 +292,6 @@
   color: var(--violet4);
 }
 
-.section-dashboard__content {
-  overflow: auto;
-}
-
 @media (max-width: 530px) {
   .card-filter__list {
     display: none;
@@ -298,12 +299,10 @@
 }
 
 .section-dashboard__list {
-  display: flex;
-  gap: 32px;
-  align-items: center;
-}
-.section-dashboard__item {
-  width: 255px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 255px);
+  grid-gap: 32px;
+  justify-items: center;
 }
 
 @media (max-width: 1500px) {
@@ -319,10 +318,7 @@
   border-radius: 15px;
   padding: 9px 8px 27px 8px;
 }
-.card-wrapper {
-  background-color: var(--violet3);
-  border-radius: 15px;
-}
+
 .card-nft__top {
   position: relative;
 }
@@ -488,8 +484,6 @@
   display: flex;
   flex-direction: column;
   gap: 28px;
-  align-items: center;
-  margin: 0 auto;
 }
 
 .article-card {
@@ -516,7 +510,7 @@
   flex-direction: column;
 }
 
-.article-card__content.card-nft {
+.article-card__content .card-nft {
   padding: 0;
 }
 .article-card__list {
@@ -536,7 +530,8 @@
 
 @media (max-width: 1215px) {
   .dashboard__aside {
-    margin-top: 20px;
+    margin: 20px auto 0 auto;
+    align-items: center;
   }
 }
 
@@ -548,6 +543,11 @@
     margin-right: 0px;
     gap: 15px;
   }
+}
+
+.card-wrapper {
+  background-color: var(--violet3);
+  border-radius: 15px;
 }
 
 /* widgets */
