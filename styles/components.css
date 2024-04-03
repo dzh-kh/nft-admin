@@ -3,7 +3,7 @@
 .sidebar {
   width: 247px;
   padding: 0 0px 50px 28px;
-  background: var(--violet3);
+  background: var(--card-background);
   position: fixed;
   max-height: 100vh;
   height: 100%;
@@ -44,7 +44,7 @@
   position: absolute;
   height: 4px;
   width: 90%;
-  background: var(--violet4);
+  background: var(--violet1);
   border-radius: 10px;
   bottom: 0;
 }
@@ -80,7 +80,7 @@
   align-items: center;
   gap: 14px;
   height: 50px;
-  color: var(--violet7);
+  color: var(--nav-text-color);
   position: relative;
   padding: 0 25px 0 12px;
   border-radius: 5px 0px 0px 5px;
@@ -88,12 +88,12 @@
 
 .nav-menu__link--selected {
   display: flex;
-  color: var(--violet4);
-  background: rgba(var(--violet11), 0.04);
+  color: var(--violet1);
+  background: rgba(var(--nav-selected-color), 0.04);
 }
 .nav-menu__link--selected:after {
   content: "";
-  border-right: 4px solid var(--violet4);
+  border-right: 4px solid var(--violet1);
   position: absolute;
   right: 0;
   height: 70%;
@@ -111,8 +111,8 @@
   margin-left: 12px;
 }
 .nav-menu__pro-sub {
-  background: var(--green2);
-  color: var(--green1);
+  background: var(--pro-sub-bg);
+  color: var(--success);
   border-radius: 37px;
   padding: 4px 7px;
   font-size: 0.643rem;
@@ -157,7 +157,7 @@
 }
 
 .searchbar {
-  background: var(--violet3);
+  background: var(--card-background);
   color: rgba(var(--white1), 1);
   border-radius: 12px;
   padding: 13px 30px;
@@ -177,7 +177,7 @@
 
 .notification-btn {
   padding: 12px 15px;
-  background: var(--violet3);
+  background: var(--card-background);
   border-radius: 50%;
   width: 46px;
   height: 46px;
@@ -289,7 +289,7 @@
 }
 
 .card-filter__input:checked + label {
-  color: var(--violet4);
+  color: var(--violet1);
 }
 
 @media (max-width: 530px) {
@@ -314,7 +314,7 @@
 
 /* nft card */
 .card-nft {
-  background-color: var(--violet3);
+  background-color: var(--card-background);
   border-radius: 15px;
   padding: 9px 8px 27px 8px;
 }
@@ -344,7 +344,7 @@
   position: absolute;
   left: 11px;
   bottom: 17px;
-  background-color: var(--violet3);
+  background-color: var(--card-background);
   border-radius: 13px;
   padding: 4px 9px;
   font-size: 0.786rem;
@@ -367,7 +367,7 @@
 }
 
 .card-nft__creator img {
-  border: 3px solid var(--violet3);
+  border: 3px solid var(--card-background);
   border-radius: 50%;
   width: 100%;
 }
@@ -398,7 +398,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  color: var(--violet4);
+  color: var(--violet1);
 }
 
 .card-nft__price {
@@ -458,10 +458,10 @@
 }
 
 .table-nft__cell--fail {
-  color: var(--red1);
+  color: var(--fail);
 }
 .table-nft__cell--success {
-  color: var(--green1);
+  color: var(--success);
 }
 
 .table-nft__content {
@@ -546,7 +546,7 @@
 }
 
 .card-wrapper {
-  background-color: var(--violet3);
+  background-color: var(--card-background);
   border-radius: 15px;
 }
 
@@ -554,7 +554,11 @@
 
 .balance-widget {
   border-radius: 15px;
-  background: linear-gradient(to bottom right, var(--violet5), var(--violet6));
+  background: linear-gradient(
+    to bottom right,
+    var(--widget-gradient-start),
+    var(--widget-gradient-start)
+  );
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -580,27 +584,27 @@
 }
 
 .btn--primary {
-  background: var(--violet1);
+  background: var(--primary-btn-bg);
   color: rgba(var(--white1), 1);
   font-weight: 600;
 }
 
 .btn--secondary {
   color: rgba(var(--white1), 1);
-  color: var(--violet9);
+  color: var(--secondary-btn-text);
   font-weight: 700;
   background: var(--white2);
 }
 
 .btn--tertiary {
-  background: rgba(var(--violet8), 0.2);
-  color: var(--violet10);
+  background: rgba(var(--tertiary-btn-bg), 0.2);
+  color: var(--tertiary-btn-text);
 }
 
 .select {
   display: inline-block;
   border-radius: 5px;
-  font-size: 0.929rem;
+  font-size: 0.93rem;
   position: relative;
 }
 
@@ -625,6 +629,6 @@
 }
 
 .select--primary {
-  background: var(--violet3);
+  background: var(--card-background);
   color: rgba(var(--white1), 1);
 }
