@@ -17,14 +17,11 @@ sidebar.addEventListener("scroll", onSidebarScroll);
 
 const onClick = (e) => {
   sidebar.classList.toggle("sidebar--open");
-  e.stopPropagation();
 };
 
 const onOutsideClick = (e) => {
   if (
-    sidebar.classList.contains("sidebar--open") &&
-    e.target !== sidebar &&
-    !e.target.contains(sidebar)
+    !e.target.closest(sidebar)
   ) {
     sidebar.classList.remove("sidebar--open");
   }
